@@ -4,7 +4,7 @@
   <subtitle><![CDATA[测试，生活，游戏，写作]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qitaos.github.io/"/>
-  <updated>2015-05-17T10:39:43.000Z</updated>
+  <updated>2015-06-01T08:32:45.000Z</updated>
   <id>http://qitaos.github.io/</id>
   
   <author>
@@ -13,6 +13,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[robotframework-demo分享]]></title>
+    <link href="http://qitaos.github.io/2015/06/01/2015-rf-demo/"/>
+    <id>http://qitaos.github.io/2015/06/01/2015-rf-demo/</id>
+    <published>2015-06-01T08:29:43.000Z</published>
+    <updated>2015-06-01T08:32:45.000Z</updated>
+    <content type="html"><![CDATA[<p>在前一篇里不明显，单独拿出来方便大家找demo。这两天还在陆陆续续做一些修改，后续书里的demo也是放在github里。</p>
+<p>之前整理了一下demo，放到github上了。地址如下:</p>
+<p><a href="https://github.com/qitaos/rf-demos" target="_blank" rel="external">https://github.com/qitaos/rf-demos</a></p>
+<p>录制的2个视频也没有时间播放，在github上有分享地址，如果那边下载不了就下载这里的吧。</p>
+<p><a href="/video/dbtest1.mp4">database-oracle</a></p>
+<p><a href="/video/autoittest.mp4">autoittest</a></p>
+<p>当天演讲的 <a href="/static/RF自动化测试介绍.pdf">ppt</a> 可以从这里下载</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在前一篇里不明显，单独拿出来方便大家找demo。这两天还在陆陆续续做一些修改，后续书里的demo也是放在github里。</p>
+<p>之前整理了一下demo，放到github上了。地址如下:</p>
+<p><a href="https://github.com/qitao]]>
+    </summary>
+    
+      <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="自动化测试" scheme="http://qitaos.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[南京软件开发者大会2015归来记]]></title>

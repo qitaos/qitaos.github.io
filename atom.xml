@@ -4,7 +4,7 @@
   <subtitle><![CDATA[测试，生活，游戏，写作]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qitaos.github.io/"/>
-  <updated>2015-06-01T08:32:45.000Z</updated>
+  <updated>2015-06-02T14:16:52.000Z</updated>
   <id>http://qitaos.github.io/</id>
   
   <author>
@@ -13,6 +13,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Mobile Testing Summit China 2015]]></title>
+    <link href="http://qitaos.github.io/2015/06/02/mobile-testing-summit-china-2015/"/>
+    <id>http://qitaos.github.io/2015/06/02/mobile-testing-summit-china-2015/</id>
+    <published>2015-06-02T14:10:42.000Z</published>
+    <updated>2015-06-02T14:16:52.000Z</updated>
+    <content type="html"><![CDATA[<p>帮忙monkey转发～～～～～</p>
+<p> 2015年7月11日 8:30 ～ 2015年7月11日 18:00</p>
+<p>（北京海淀）海淀区北三环内西土城路10号</p>
+<p> 限额300人</p>
+<p> <a href="http://testerhome.com" target="_blank" rel="external">Testerhome</a>主办</p>
+<p> 报名购票地址：<a href="http://www.huodongxing.com/event/8284656929600?from=groupmessage&amp;isappinstalled=0" target="_blank" rel="external">http://www.huodongxing.com/event/8284656929600?from=groupmessage&amp;isappinstalled=0</a></p>
+<p> 我估计没机会去了，北京及周边同学感兴趣可以参加下～</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>帮忙monkey转发～～～～～</p>
+<p> 2015年7月11日 8:30 ～ 2015年7月11日 18:00</p>
+<p>（北京海淀）海淀区北三环内西土城路10号</p>
+<p> 限额300人</p>
+<p> <a href="http://testerhome.]]>
+    </summary>
+    
+      <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="自动化测试" scheme="http://qitaos.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[robotframework-demo分享]]></title>

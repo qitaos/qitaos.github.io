@@ -19,6 +19,7 @@
 <meta property="og:site_name" content="齐道长的博客">
 <meta property="og:description" content="这次去南京的旅程真心遭罪，去南京的时候飞机由于天气原因延误2小时，到了南京已经半夜2点了。本来定的周日17点回深圳的机票，结果回来的机票还被取消了，临时改签半夜的航班，回到家也是1点多了。
 5月9日南京，很荣幸参加了这次南京软件开发者大会，非常感谢陈振宇教授和王婧宇校长。会上又一次见到了monkey，也认识了很多老师，程冲、成林、黄俊等等不一一列举了。">
+<meta property="og:updated_time" content="2015-05-17T10:39:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="南京软件开发者大会2015归来记">
 <meta name="twitter:description" content="这次去南京的旅程真心遭罪，去南京的时候飞机由于天气原因延误2小时，到了南京已经半夜2点了。本来定的周日17点回深圳的机票，结果回来的机票还被取消了，临时改签半夜的航班，回到家也是1点多了。
@@ -335,7 +336,7 @@
 		
 		
 		
-		<a href="https://www.zhihu.com/people/qitaos" target="_blank" class="icon-zhihu" title="知乎"></a>
+		<a href="http://www.zhihu.com/people/qitaos" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		<a href="https://plus.google.com/104886281322801219692?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
@@ -359,6 +360,7 @@
     <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){ 
@@ -443,8 +445,8 @@ $(document).ready(function(){
       tsina = $this.attr('data-tsina'),
       description = $this.attr('description');
   var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
   '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
   '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
   '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
@@ -453,14 +455,34 @@ $(document).ready(function(){
   '<span title="Share to"></span>'
   ].join('');
   $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
   });
-});     
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
 </script>
 
 

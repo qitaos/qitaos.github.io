@@ -219,9 +219,9 @@
     
     </summary>
     
-      <category term="agile" scheme="http://qitaos.github.io/tags/agile/"/>
-    
       <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="agile" scheme="http://qitaos.github.io/tags/agile/"/>
     
   </entry>
   

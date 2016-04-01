@@ -4,7 +4,7 @@
   <subtitle><![CDATA[测试，生活，游戏，写作]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qitaos.github.io/"/>
-  <updated>2016-01-16T02:51:39.000Z</updated>
+  <updated>2016-04-01T03:40:07.000Z</updated>
   <id>http://qitaos.github.io/</id>
   
   <author>
@@ -15,16 +15,138 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://qitaos.github.io/2016/01/16/%E5%88%AB%E4%BA%BA%E5%AE%B6%E7%9A%84%E5%B9%B4%E4%BC%9A/"/>
-    <id>http://qitaos.github.io/2016/01/16/别人家的年会/</id>
-    <published>2016-01-16T02:51:39.000Z</published>
-    <updated>2016-01-16T02:51:39.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="别人家的年会">别人家的年会</h1><p>去年的12月16日离开了前一家公司（其实也就不到一个月之前），今天老东家开年会，还是在会展中心，奖品相当给力。</p>
+    <title><![CDATA[RF环境安装-windows32位-基础环境-安装指南]]></title>
+    <link href="http://qitaos.github.io/2016/03/31/20160331-rf-envconfig-win32-basic/"/>
+    <id>http://qitaos.github.io/2016/03/31/20160331-rf-envconfig-win32-basic/</id>
+    <published>2016-03-31T13:00:08.000Z</published>
+    <updated>2016-04-01T03:40:07.000Z</updated>
+    <content type="html"><![CDATA[<p>前面该说的都说了，下面开始正式进入基础环境安装指南。</p>
+<p>一、适用环境：<br>Windows系列，32位Python</p>
+<p>二、简要步骤：</p>
+<ol>
+<li>安装Python，此处我下载的版本是Python2.7.11.msi</li>
+<li>安装wxPython，此处我下载的版本是wxPython2.8-win32-unicode-2.8.12.1-py27.exe</li>
+<li>使用pip install安装robotframework</li>
+<li>使用pip install安装robotframework-ride</li>
+<li>完成基础环境安装，简单验证</li>
+</ol>
+<p>===== 接下来多图预警，土豪随意 =====</p>
+<a id="more"></a>
+<p>三、详细步骤：</p>
+<ol>
+<li>安装Python</li>
+</ol>
+<p>访问Python的下载地址：<a href="https://www.python.org/downloads/release/python-2711/" target="_blank" rel="external">https://www.python.org/downloads/release/python-2711/</a><br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/93a7ffbeb4c426c23d51c20645d6c973.png" alt=""><br>如果以后有新版可以在官网首页看一下是什么版本了，我们需要下载Python2.7系列的，现在最新的是2.7.11，所以我下载Python2.7.11.msi文件，这个是32位的。</p>
+<p>下载后双击文件运行<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/d1f57d8a3372aa4b24bad73fd5748b67.png" alt=""></p>
+<p>这里直接点Next就行了<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/ec549f739de84a656750e2a97d0b73f2.png" alt=""></p>
+<p>这里设置Python的目录，默认是C:\Python27\，你可以改成D盘或其他盘，但是最好不要选择有中文或空格的目录（比如Program Files），因为以后你安装其他库会遇到问题（尤其是AutoItLibrary）。设置好之后点Next继续<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/eee8865b0f1df5340f1d697e9d26c8cd.png" alt=""></p>
+<p>看到这个界面，把上面的滚动条拉到最下面，有一个Add Python.exe to Path，默认左边的图标是红色的叉，也就是不会在安装时执行。以前都是让大家手动添加，很多人容易漏加Scripts目录，这里安装的时候会自动帮你装好。<br>我们点击这一项左边的下拉箭头，选择第一项：“Will be installed on local hard drive”。<br>顺带提一句，这里倒数第三项的pip非常好，不需要自己单独下载了，接下来用处很大。之后就一路Next完成安装即可。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/d6247e59aca92575e7206d4e8b3c41d6.png" alt=""></p>
+<p>安装完成后我们可以看一下环境变量，这里已经帮我们添加好需要添加的两个路径了。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/12f7a5eee3a2dd336de91cb719d97e17.png" alt=""></p>
+<ol>
+<li>安装wxPython<br>为了用到后面的RIDE，我们需要先安装wxPython，虽然RIDE已经在2.0alpha版本开始用3.0的，但是貌似新版还有很多坑，先别急着踩坑了，还是用稳定的wxPython2.8.12.1吧。<br>下载地址：<a href="https://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/" target="_blank" rel="external">https://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/</a><br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/136cbe5a161ad78fe94891991c93b84a.png" alt=""></li>
+</ol>
+<p>由于文件名字太长，需要把鼠标悬浮到每一个文件上看完整的文件名，确认名字是wxPython2.8-win32-unicode-2.8.12.1-py27.exe，不要有差错。<br>win32是因为Python是32位的，unicode是必须的，不要下载ansi版本，2.8.12.1是RIDE稳定支持的版本，py27是Python2.7系列的，不要下错2.6的。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c70039699d0669b47af6601bb5909d2a.png" alt=""></p>
+<p>双击下载exe文件<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/80749d446f174536013dd8a79f3b4802.png" alt=""></p>
+<p>点击Next<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/b7a5c313acfc219068f2ce5c160c8867.png" alt=""></p>
+<p>选择I accept那一项，点击Next<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/5a92807b8271d3ecd212a982baf44cf0.png" alt=""></p>
+<p>这里不用管，直接一路Next安装完成就行。</p>
+<ol>
+<li>安装robotframework<br>Python2.7.11这个版本自带了pip（我不记得从哪个版本开始有pip的，印象里之前的版本都没有的），所以安装好Python后就不需要单独安装pip了，我们直接在打开运行，输入cmd<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/3ecf1f3bfbc0af2373e27b223efae294.png" alt=""></li>
+</ol>
+<p>点击确定后进入命令行界面，先输入pip list看看都安装了什么，貌似pip版本比较旧了<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/e09b9612d786164e3b23150a3d2278f7.png" alt=""></p>
+<p>按照提示输入以下命令升级一下pip：<br><code>python -m pip install --upgrade pip</code></p>
+<p><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/214fc31e6ad1f0ba6727730c205af107.png" alt=""></p>
+<p>看到Successfully这一句就是表示升级安装完成了，在用pip list看一下，pip的版本已经升级到8.1.1了。<br>接下来我们用pip来安装Robotframework：</p>
+<p><code>pip install robotframework==3.0</code></p>
+<p><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/5d488654037e82b88e09ddc924c2ff30.png" alt=""></p>
+<p>一般情况下后面的 ==3.0 这部分不需要输入的，这是指定特定版本安装的语法，如果不加也没问题，默认是安装最新的版本。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c935fa0851255316e020bb0707113c19.png" alt=""></p>
+<p>看到Successfully就是安装完成了。<br>如果没有看到Successfully，有可能你的网络有问题，因为这种安装方式都是依赖网络的。</p>
+<p>如果你的网络无法安装，那么只能先去下载Robotframework的源码包，这里提供两个地址：<br><a href="https://github.com/robotframework/robotframework/releases" target="_blank" rel="external">https://github.com/robotframework/robotframework/releases</a><br><a href="https://pypi.python.org/pypi/robotframework" target="_blank" rel="external">https://pypi.python.org/pypi/robotframework</a></p>
+<p>两个地方都有最新的包，以3.0版本为例，robotframework-3.0.tar.gz文件就是我们需要下载的，下载后解压缩，从命令行进入解压缩后的目录（有setup.py文件的那一层），输入命令：</p>
+<p><code>python setup.py install</code></p>
+<p>如果失败，很可能是你当前的目录不在setup.py文件那一层。这种方式就没单独准备图了。</p>
+<ol>
+<li>安装robotframework-ride</li>
+</ol>
+<p>输入安装命令：<br><code>pip install robotframework-ride</code></p>
+<p><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/a80702ba7523720dc35e22eec4193d75.png" alt=""></p>
+<p>比如这次我们没有输入特定版本号，他就安装了最新的1.5.2.1版本。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/9c55c7b7e4ae99a8404315feeaf26992.png" alt=""></p>
+<p>同样看到Successfully就是安装成功了。</p>
+<p>如果没有成功的话，请参考Robotframework下载源码安装的方式，下载ride的源码，同样提供两个地址：<br><a href="https://pypi.python.org/pypi/robotframework-ride" target="_blank" rel="external">https://pypi.python.org/pypi/robotframework-ride</a><br><a href="https://github.com/robotframework/RIDE/releases" target="_blank" rel="external">https://github.com/robotframework/RIDE/releases</a></p>
+<p>这里不推荐使用exe安装的，虽然有快捷图标，但是其实命令行运行也很方便的，并且有问题的时候命令行能看到错误日志。当然，如果你很喜欢快捷图标的话，后面的文章我会写一下怎么自己做一个。</p>
+<ol>
+<li>完成基础环境安装，简单验证</li>
+</ol>
+<p>此时基础环境基本上都安装好了，我们来简单验证一下。<br>在命令行输入ride.py：<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/0c0e75fd5108be9e8fac6bef464a91f8.png" alt=""></p>
+<p>看到如下界面就是安装成功了。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/06ae4e97a0a559fa60ad59506216b35b.png" alt=""></p>
+<p>我的电脑在打开RIDE的同时出现了防火墙阻拦，直接点击允许访问就好了。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/210e92eddedd5c990f26c2cc127cc53f.png" alt=""></p>
+<p>接着写个简单的hello world吧<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/1cb2e555033fc05bcdddd650bde7fdfb.png" alt=""></p>
+<p>运行一下<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/dc2bec22131f58730aa0bb62fa0ec242.png" alt=""></p>
+<p>看到绿色的标示就是成功了，案例状态也显示PASS了。</p>
+<p>至此Windows-32位的基础环境就安装好了，希望你们也一样顺利的完成安装。</p>
+<blockquote>
+<p>可惜我的公众号不能认证，发url什么的不能直接变成链接，太不方便了。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前面该说的都说了，下面开始正式进入基础环境安装指南。</p>
+<p>一、适用环境：<br>Windows系列，32位Python</p>
+<p>二、简要步骤：</p>
+<ol>
+<li>安装Python，此处我下载的版本是Python2.7.11.msi</li>
+<li>安装wxPython，此处我下载的版本是wxPython2.8-win32-unicode-2.8.12.1-py27.exe</li>
+<li>使用pip install安装robotframework</li>
+<li>使用pip install安装robotframework-ride</li>
+<li>完成基础环境安装，简单验证</li>
+</ol>
+<p>===== 接下来多图预警，土豪随意 =====</p>]]>
+    
+    </summary>
+    
+      <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="自动化测试" scheme="http://qitaos.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[RF环境安装-系列即将推出]]></title>
+    <link href="http://qitaos.github.io/2016/03/30/20160330-rf-envconfig-guide-all/"/>
+    <id>http://qitaos.github.io/2016/03/30/20160330-rf-envconfig-guide-all/</id>
+    <published>2016-03-30T13:00:00.000Z</published>
+    <updated>2016-04-01T03:40:07.000Z</updated>
+    <content type="html"><![CDATA[<p>虽然我的Robotframework新书出版了，不过还是有很多同学在安装环境上遇到问题，因此准备在微信公众号里推出一个环境安装系列，会把基础环境和一些常用的测试库的安装指南都列出来，之前有发过AutoItLibrary的安装，也算在这个系列内。</p>
+<p>这次做的安装指南比较细，并且不会是一个大而全的说明。比如最先发的会是基础环境，并且会区分不同平台，之后会有不同测试库的环境安装（也会分平台），每一篇都会比较细致，我会先写出简要步骤，后面才是具体的截图，有很多张图片，为了你的流量考虑，我会在多图之前预警的，土豪随意。</p>
+<a id="more"></a>
+<p>因为会分不同平台，所以我用VirtualBox准备了几套环境，包括Windows、Mac和Linux等。每个平台会准备至少两套环境，Windows系列我准备了一个Win7的64位系统，然后copy了一份，分别用来做32位和64位的安装。也就是说接下来的32位安装指南其实是在64位系统上进行的。后面我会根据情况看是否再准备Win7的32位系统，因为64位系统也可以安装32位的Python，Robotframework一系列相关的环境到底用32位还是64位，主要取决于Python。当然我以前还在科技的时候碰到过64位上安装32位Python的坑（主要是Oracle数据库），这次顺便看看会不会再碰到。</p>
+<p>Mac的环境计划准备10.10和10.11两个，其实这两个版本的系统安装上没有太大差异，主要是10.11在wxPython安装上问题较大，所以分两个环境给大家讲解。Linux的环境其实很多不同版本，大多都很类似，我计划准备Ubuntu和centos的环境，Ubuntu我之前准备了一个服务器版本，后面装个个人版看看，据之前qq群某同学说是Ubuntu个人版除了不能用RIDE外，是最适合Robotframework的平台，我也想看看是不是这样的。</p>
+<p>所以环境安装指南系列初期都是各个平台的安装指南，希望对不同平台的同学有所帮助。然后我会用这些装好的环境继续安装各个不同的测试库，比如web测试的、数据库测试的、接口测试等等。</p>
+<p>希望通过这个系列，让更多的同学不再受环境问题困扰，把精力投入到实际的测试案例设计和编写上。本来今天就想发第一篇的，但是发现还是先做个整体说明比较好，不然第一篇里内容有些超长了。本周会完成基础环境部分的Windows的32和64位的指南以及Mac的指南，下周是Linux的。之后是各个测试库的，如果有特别想提前的，你懂得~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>虽然我的Robotframework新书出版了，不过还是有很多同学在安装环境上遇到问题，因此准备在微信公众号里推出一个环境安装系列，会把基础环境和一些常用的测试库的安装指南都列出来，之前有发过AutoItLibrary的安装，也算在这个系列内。</p>
+<p>这次做的安装指南比较细，并且不会是一个大而全的说明。比如最先发的会是基础环境，并且会区分不同平台，之后会有不同测试库的环境安装（也会分平台），每一篇都会比较细致，我会先写出简要步骤，后面才是具体的截图，有很多张图片，为了你的流量考虑，我会在多图之前预警的，土豪随意。</p>]]>
+    
+    </summary>
+    
+      <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="自动化测试" scheme="http://qitaos.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[别人家的年会]]></title>
+    <link href="http://qitaos.github.io/2016/01/17/%E5%88%AB%E4%BA%BA%E5%AE%B6%E7%9A%84%E5%B9%B4%E4%BC%9A/"/>
+    <id>http://qitaos.github.io/2016/01/17/别人家的年会/</id>
+    <published>2016-01-17T13:00:08.000Z</published>
+    <updated>2016-04-01T03:40:07.000Z</updated>
+    <content type="html"><![CDATA[<p>去年的12月16日离开了前一家公司（其实也就不到一个月之前），今天老东家开年会，还是在会展中心，奖品相当给力。</p>
 <blockquote>
 <p>据说幸运奖是蚕丝被。三等奖20无人机，30个iphone，二等奖10个相机，20个pro，一等奖10个金条。特等奖8个欧洲游（2万），超级奖2个现金20万。</p>
 </blockquote>
 <p>这个超级奖真的看着好眼红。</p>
+<a id="more"></a>
 <p>有人说我离职的早了，应该等等再说。然并卵啊，就算我没有离职也只有看着的份，因为我原先的部门被划分到集团另一家子公司了，虽然去年底今年初才分过去的，但是可惜不能参加这边的年会了，只能去参加新公司的年会。</p>
 <p>新公司的年会奖品那真是，居然搞众筹，自己出钱买奖券抽奖。。。这算非法博彩么？<br>众筹规则如图：</p>
 <p>众筹的几种可能结果：</p>
@@ -39,23 +161,31 @@
 <p>为了提前积攒人品，周日就是我的新公司的年会了，希望能有好运气中大奖~下面放一些今晚的现场图片（前方多图高能预警）</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="别人家的年会">别人家的年会</h1><p>去年的12月16日离开了前一家公司（其实也就不到一个月之前），今天老东家开年会，还是在会展中心，奖品相当给力。</p>
+    <![CDATA[<p>去年的12月16日离开了前一家公司（其实也就不到一个月之前），今天老东家开年会，还是在会展中心，奖品相当给力。</p>
 <blockquote>
-<p>据说幸运奖是蚕丝被。三等奖20无人机，30个iphone，二等奖10]]>
+<p>据说幸运奖是蚕丝被。三等奖20无人机，30个iphone，二等奖10个相机，20个pro，一等奖10个金条。特等奖8个欧洲游（2万），超级奖2个现金20万。</p>
+</blockquote>
+<p>这个超级奖真的看着好眼红。</p>]]>
+    
     </summary>
+    
+      <category term="年会" scheme="http://qitaos.github.io/tags/%E5%B9%B4%E4%BC%9A/"/>
+    
+      <category term="生活" scheme="http://qitaos.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://qitaos.github.io/2016/01/09/2015%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E6%9A%A8%E5%B1%95%E6%9C%9B2016/"/>
-    <id>http://qitaos.github.io/2016/01/09/2015年终总结暨展望2016/</id>
-    <published>2016-01-09T09:42:14.000Z</published>
-    <updated>2016-01-09T09:42:14.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="2015年终总结暨展望2016">2015年终总结暨展望2016</h1><ul>
+    <title><![CDATA[2015年终总结暨展望2016]]></title>
+    <link href="http://qitaos.github.io/2015/12/31/2015%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E6%9A%A8%E5%B1%95%E6%9C%9B2016/"/>
+    <id>http://qitaos.github.io/2015/12/31/2015年终总结暨展望2016/</id>
+    <published>2015-12-31T13:00:08.000Z</published>
+    <updated>2016-04-01T03:40:07.000Z</updated>
+    <content type="html"><![CDATA[<ul>
 <li>工作</li>
 </ul>
 <p>今年初正式转入新的部门—任意门，负责测试团队管理，逐渐完善了测试团队的人员结构。一年来任意门发布了若干版本，若干H5页面，和若干不同团队沟通、协调、吵架。顺便有机会出差第一次去了上海。到了年底，终于放下一切，离开了平安科技，去了新公司恒信易贷。</p>
+<a id="more"></a>
 <ul>
 <li>生活</li>
 </ul>
@@ -73,11 +203,16 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="2015年终总结暨展望2016">2015年终总结暨展望2016</h1><ul>
+    <![CDATA[<ul>
 <li>工作</li>
 </ul>
-<p>今年初正式转入新的部门—任意门，负责测试团队管理，逐渐完善了测试团队的人员结构。一年来任意门发布了若干版本，若干H5页面，和若干不同团队沟]]>
+<p>今年初正式转入新的部门—任意门，负责测试团队管理，逐渐完善了测试团队的人员结构。一年来任意门发布了若干版本，若干H5页面，和若干不同团队沟通、协调、吵架。顺便有机会出差第一次去了上海。到了年底，终于放下一切，离开了平安科技，去了新公司恒信易贷。</p>]]>
+    
     </summary>
+    
+      <category term="总结" scheme="http://qitaos.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="总结" scheme="http://qitaos.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -105,11 +240,12 @@
     <link href="http://qitaos.github.io/2015/12/30/20151219-testerhome-sz/"/>
     <id>http://qitaos.github.io/2015/12/30/20151219-testerhome-sz/</id>
     <published>2015-12-30T07:29:21.000Z</published>
-    <updated>2015-12-30T12:42:50.000Z</updated>
-    <content type="html"><![CDATA[<p>很荣幸</p>
-<a id="more"></a>]]></content>
+    <updated>2016-03-31T10:19:37.000Z</updated>
+    <content type="html"><![CDATA[<p>很荣幸被邀请</p>
+<a id="more"></a>
+]]></content>
     <summary type="html">
-    <![CDATA[<p>很荣幸</p>]]>
+    <![CDATA[<p>很荣幸被邀请</p>]]>
     
     </summary>
     

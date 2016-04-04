@@ -4,7 +4,7 @@
   <subtitle><![CDATA[测试，生活，游戏，写作]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qitaos.github.io/"/>
-  <updated>2016-04-01T03:40:07.000Z</updated>
+  <updated>2016-04-04T07:29:15.000Z</updated>
   <id>http://qitaos.github.io/</id>
   
   <author>
@@ -15,15 +15,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[RF环境安装-windows64位-基础环境-安装指南]]></title>
+    <link href="http://qitaos.github.io/2016/04/04/20160404-rf-envconfig-win64-basic/"/>
+    <id>http://qitaos.github.io/2016/04/04/20160404-rf-envconfig-win64-basic/</id>
+    <published>2016-04-04T06:31:56.000Z</published>
+    <updated>2016-04-04T07:29:15.000Z</updated>
+    <content type="html"><![CDATA[<p>这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。</p>
+<h2 id="一、适用环境：">一、适用环境：</h2><p>Windows系列，64位Python</p>
+<h2 id="二、简要步骤：">二、简要步骤：</h2><ol>
+<li>安装Python，此处我下载的版本是Python-2.7.11.amd64.msi</li>
+<li>安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe</li>
+<li>使用pip install安装robotframework</li>
+<li>使用pip install安装robotframework-ride</li>
+<li>完成基础环境安装，简单验证</li>
+</ol>
+<a id="more"></a>
+<h2 id="三、详细步骤：">三、详细步骤：</h2><p>由于这篇和前一篇内容是差不多的，所以简单步骤其实是一样的，只是下载的2个文件是需要64位的。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c25f8ff9ac43201129c7ca32914be1ab.png" alt=""></p>
+<p>第一个是Python的文件，这里下载的文件是python-2.7.11.amd64.msi，比前一篇下载的文件多了amd64几个字，这个标明是适用于64位操作系统的。</p>
+<p>第二个是wxPython的文件，确认名字是wxPython2.8-win64-unicode-2.8.12.1-py27.exe，不要有差错。<br>win64是因为Python是64位的，unicode是必须的，2.8.12.1是RIDE稳定支持的版本，py27是Python2.7系列的，因为Python是64位的，所以其他配套的程序都要以Python为准，也要64位的。</p>
+<p>后面的安装步骤和32位的没有什么差异，步骤都一样就没必要再搞一遍多图了，具体步骤请参考前一篇32位的。</p>
+<p><a href="/2016/03/31/20160331-rf-envconfig-win32-basic/">32位安装指南</a></p>
+<h2 id="四、pip">四、pip</h2><p>那么我们顺便来说一下pip吧，以前的版本都要自己单独安装pip，单独安装pip我其实比较推荐去下载源码包的方式，pip官网（pip.pypa.io）倒是提供了一个get-pip.py文件的方式，我之前用过一次，貌似不知什么原因安装完成后pip命令还是用不了，后来还是用源码包安装解决了，所以反正都是要下载个文件，不如一步到位吧。</p>
+<p>pip是从Python2.7.9开始集成到Python安装包里了，不过版本略旧，需要升级一下，上次我们升级pip用的是下面这个命令</p>
+<p><code>python -m pip install --upgrade pip</code></p>
+<p>也可以简化一些：</p>
+<p><code>pip install --upgrade pip</code></p>
+<p>如果还想再少打几个字，可以把—upgrade换成-U，即：</p>
+<p><code>pip install -U pip</code></p>
+<p>通常来说，新安装一个包，pip的语法是：</p>
+<p><code>pip install pkgname</code></p>
+<p>比如我们安装Robotframework的时候就是下面的命令</p>
+<p><code>pip install robotframework</code></p>
+<p>当时我们还加了==3.0，这是指定要pip安装这个包的特定版本号的，有些时候新出来的包还有问题，那就可以用这种方式安装旧的版本。</p>
+<p>如果后面你要升级一个包，pip的语法是：</p>
+<p><code>pip install --upgrade pkgname</code></p>
+<p><code>pip install -U pkgname</code></p>
+<p>前面pip的升级就是例子了。</p>
+<p>在我的新书里，其实最开始我对pip用的并不多，主要是因为当时在公司的网络环境限制，pip无法发挥它的作用，在我写书的后半段因为用Mac电脑，用pip真是得心应手，所以后面有些章节我也推荐大家使用pip安装，特别是rf-demos（github.com/qitaos/rf-demos）里。</p>
+<p>如果你的网络环境受限制，pip用不了，那么你只能很悲催手动下载源码包安装了，而且遇到有依赖的时候，更是要一个个依赖下载下来，我以前经历过这种痛苦，所以pip极大地解决了这个痛苦。</p>
+<p>希望这里的安装说明对大家有用。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。</p>
+<h2 id="一、适用环境：">一、适用环境：</h2><p>Windows系列，64位Python</p>
+<h2 id="二、简要步骤：">二、简要步骤：</h2><ol>
+<li>安装Python，此处我下载的版本是Python-2.7.11.amd64.msi</li>
+<li>安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe</li>
+<li>使用pip install安装robotframework</li>
+<li>使用pip install安装robotframework-ride</li>
+<li>完成基础环境安装，简单验证</li>
+</ol>]]>
+    
+    </summary>
+    
+      <category term="robotframework" scheme="http://qitaos.github.io/tags/robotframework/"/>
+    
+      <category term="自动化测试" scheme="http://qitaos.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[RF环境安装-windows32位-基础环境-安装指南]]></title>
     <link href="http://qitaos.github.io/2016/03/31/20160331-rf-envconfig-win32-basic/"/>
     <id>http://qitaos.github.io/2016/03/31/20160331-rf-envconfig-win32-basic/</id>
     <published>2016-03-31T13:00:08.000Z</published>
-    <updated>2016-04-01T03:40:07.000Z</updated>
+    <updated>2016-04-04T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>前面该说的都说了，下面开始正式进入基础环境安装指南。</p>
-<p>一、适用环境：<br>Windows系列，32位Python</p>
-<p>二、简要步骤：</p>
-<ol>
+<h2 id="一、适用环境：">一、适用环境：</h2><p>Windows系列，32位Python</p>
+<h2 id="二、简要步骤：">二、简要步骤：</h2><ol>
 <li>安装Python，此处我下载的版本是Python2.7.11.msi</li>
 <li>安装wxPython，此处我下载的版本是wxPython2.8-win32-unicode-2.8.12.1-py27.exe</li>
 <li>使用pip install安装robotframework</li>
@@ -32,8 +91,7 @@
 </ol>
 <p>===== 接下来多图预警，土豪随意 =====</p>
 <a id="more"></a>
-<p>三、详细步骤：</p>
-<ol>
+<h2 id="三、详细步骤：">三、详细步骤：</h2><ol>
 <li>安装Python</li>
 </ol>
 <p>访问Python的下载地址：<a href="https://www.python.org/downloads/release/python-2711/" target="_blank" rel="external">https://www.python.org/downloads/release/python-2711/</a><br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/93a7ffbeb4c426c23d51c20645d6c973.png" alt=""><br>如果以后有新版可以在官网首页看一下是什么版本了，我们需要下载Python2.7系列的，现在最新的是2.7.11，所以我下载Python2.7.11.msi文件，这个是32位的。</p>
@@ -90,9 +148,8 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>前面该说的都说了，下面开始正式进入基础环境安装指南。</p>
-<p>一、适用环境：<br>Windows系列，32位Python</p>
-<p>二、简要步骤：</p>
-<ol>
+<h2 id="一、适用环境：">一、适用环境：</h2><p>Windows系列，32位Python</p>
+<h2 id="二、简要步骤：">二、简要步骤：</h2><ol>
 <li>安装Python，此处我下载的版本是Python2.7.11.msi</li>
 <li>安装wxPython，此处我下载的版本是wxPython2.8-win32-unicode-2.8.12.1-py27.exe</li>
 <li>使用pip install安装robotframework</li>

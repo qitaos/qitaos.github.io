@@ -4,26 +4,40 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>qitao | 齐涛-道长的博客</title>
+    <title>RF环境安装-windows64位-基础环境-安装指南 | 齐涛-道长的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="齐涛-道长">
     
 
     
-    <meta name="description" content="这是我用hexo新搭建的博客，体验一下。
-以后我会逐步将博客迁移到这里来。">
+    <meta name="description" content="这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。
+一、适用环境：Windows系列，64位Python
+二、简要步骤：
+安装Python，此处我下载的版本是Python-2.7.11.amd64.msi
+安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe
+使">
 <meta property="og:type" content="article">
-<meta property="og:title" content="qitao">
-<meta property="og:url" content="http://qitaos.github.io/2015/04/28/qitao/index.html">
+<meta property="og:title" content="RF环境安装-windows64位-基础环境-安装指南">
+<meta property="og:url" content="http://qitaos.github.io/2016/04/04/20160404-rf-envconfig-win64-basic/index.html">
 <meta property="og:site_name" content="齐涛-道长的博客">
-<meta property="og:description" content="这是我用hexo新搭建的博客，体验一下。
-以后我会逐步将博客迁移到这里来。">
-<meta property="og:updated_time" content="2015-04-28T12:32:53.000Z">
+<meta property="og:description" content="这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。
+一、适用环境：Windows系列，64位Python
+二、简要步骤：
+安装Python，此处我下载的版本是Python-2.7.11.amd64.msi
+安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe
+使">
+<meta property="og:image" content="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c25f8ff9ac43201129c7ca32914be1ab.png">
+<meta property="og:updated_time" content="2016-04-04T07:29:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="qitao">
-<meta name="twitter:description" content="这是我用hexo新搭建的博客，体验一下。
-以后我会逐步将博客迁移到这里来。">
+<meta name="twitter:title" content="RF环境安装-windows64位-基础环境-安装指南">
+<meta name="twitter:description" content="这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。
+一、适用环境：Windows系列，64位Python
+二、简要步骤：
+安装Python，此处我下载的版本是Python-2.7.11.amd64.msi
+安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe
+使">
+<meta name="twitter:image" content="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c25f8ff9ac43201129c7ca32914be1ab.png">
 <meta name="twitter:creator" content="@qitaos">
 <link rel="publisher" href="104886281322801219692">
 
@@ -89,14 +103,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/28/qitao/" title="qitao" itemprop="url">qitao</a>
+      <a href="/2016/04/04/20160404-rf-envconfig-win64-basic/" title="RF环境安装-windows64位-基础环境-安装指南" itemprop="url">RF环境安装-windows64位-基础环境-安装指南</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/104886281322801219692?rel=author" title="齐涛-道长" target="_blank" itemprop="author">齐涛-道长</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-28T06:48:56.000Z" itemprop="datePublished"> 发表于 2015-04-28</time>
+    <time datetime="2016-04-04T06:31:56.000Z" itemprop="datePublished"> 发表于 2016-04-04</time>
     
   </p>
 </header>
@@ -105,12 +119,44 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、适用环境："><span class="toc-number">1.</span> <span class="toc-text">一、适用环境：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、简要步骤："><span class="toc-number">2.</span> <span class="toc-text">二、简要步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、详细步骤："><span class="toc-number">3.</span> <span class="toc-text">三、详细步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、pip"><span class="toc-number">4.</span> <span class="toc-text">四、pip</span></a></li></ol>
 		
 		</div>
 		
-		<p>这是我用hexo新搭建的博客，体验一下。</p>
-<p>以后我会逐步将博客迁移到这里来。</p>
+		<p>这篇内容其实和前一篇差不多，只是在几个关键的地方换成64位的文件即可。所以安装步骤就不详细说了，顺手说一下pip。</p>
+<h2 id="一、适用环境：">一、适用环境：</h2><p>Windows系列，64位Python</p>
+<h2 id="二、简要步骤：">二、简要步骤：</h2><ol>
+<li>安装Python，此处我下载的版本是Python-2.7.11.amd64.msi</li>
+<li>安装wxPython，此处我下载的版本是wxPython2.8-win64-unicode-2.8.12.1-py27.exe</li>
+<li>使用pip install安装robotframework</li>
+<li>使用pip install安装robotframework-ride</li>
+<li>完成基础环境安装，简单验证</li>
+</ol>
+<a id="more"></a>
+<h2 id="三、详细步骤：">三、详细步骤：</h2><p>由于这篇和前一篇内容是差不多的，所以简单步骤其实是一样的，只是下载的2个文件是需要64位的。<br><img src="https://codingstyle-cn.b0.upaiyun.com/photo/2016/c25f8ff9ac43201129c7ca32914be1ab.png" alt=""></p>
+<p>第一个是Python的文件，这里下载的文件是python-2.7.11.amd64.msi，比前一篇下载的文件多了amd64几个字，这个标明是适用于64位操作系统的。</p>
+<p>第二个是wxPython的文件，确认名字是wxPython2.8-win64-unicode-2.8.12.1-py27.exe，不要有差错。<br>win64是因为Python是64位的，unicode是必须的，2.8.12.1是RIDE稳定支持的版本，py27是Python2.7系列的，因为Python是64位的，所以其他配套的程序都要以Python为准，也要64位的。</p>
+<p>后面的安装步骤和32位的没有什么差异，步骤都一样就没必要再搞一遍多图了，具体步骤请参考前一篇32位的。</p>
+<p><a href="/2016/03/31/20160331-rf-envconfig-win32-basic/">32位安装指南</a></p>
+<h2 id="四、pip">四、pip</h2><p>那么我们顺便来说一下pip吧，以前的版本都要自己单独安装pip，单独安装pip我其实比较推荐去下载源码包的方式，pip官网（pip.pypa.io）倒是提供了一个get-pip.py文件的方式，我之前用过一次，貌似不知什么原因安装完成后pip命令还是用不了，后来还是用源码包安装解决了，所以反正都是要下载个文件，不如一步到位吧。</p>
+<p>pip是从Python2.7.9开始集成到Python安装包里了，不过版本略旧，需要升级一下，上次我们升级pip用的是下面这个命令</p>
+<p><code>python -m pip install --upgrade pip</code></p>
+<p>也可以简化一些：</p>
+<p><code>pip install --upgrade pip</code></p>
+<p>如果还想再少打几个字，可以把—upgrade换成-U，即：</p>
+<p><code>pip install -U pip</code></p>
+<p>通常来说，新安装一个包，pip的语法是：</p>
+<p><code>pip install pkgname</code></p>
+<p>比如我们安装Robotframework的时候就是下面的命令</p>
+<p><code>pip install robotframework</code></p>
+<p>当时我们还加了==3.0，这是指定要pip安装这个包的特定版本号的，有些时候新出来的包还有问题，那就可以用这种方式安装旧的版本。</p>
+<p>如果后面你要升级一个包，pip的语法是：</p>
+<p><code>pip install --upgrade pkgname</code></p>
+<p><code>pip install -U pkgname</code></p>
+<p>前面pip的升级就是例子了。</p>
+<p>在我的新书里，其实最开始我对pip用的并不多，主要是因为当时在公司的网络环境限制，pip无法发挥它的作用，在我写书的后半段因为用Mac电脑，用pip真是得心应手，所以后面有些章节我也推荐大家使用pip安装，特别是rf-demos（github.com/qitaos/rf-demos）里。</p>
+<p>如果你的网络环境受限制，pip用不了，那么你只能很悲催手动下载源码包安装了，而且遇到有依赖的时候，更是要一个个依赖下载下来，我以前经历过这种痛苦，所以pip极大地解决了这个痛苦。</p>
+<p>希望这里的安装说明对大家有用。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -118,13 +164,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/随笔/">随笔</a>
+  <a class="article-category-link" href="/categories/自动化测试/">自动化测试</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/随便写写/">随便写写</a>
+  <span></span> <a href="/tags/robotframework/">robotframework</a>
   </div>
 
 </div>
@@ -133,7 +179,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://qitaos.github.io/2015/04/28/qitao/" data-title="qitao | 齐涛-道长的博客" data-tsina="1281197970" class="share clearfix">
+	  <div data-url="http://qitaos.github.io/2016/04/04/20160404-rf-envconfig-win64-basic/" data-title="RF环境安装-windows64位-基础环境-安装指南 | 齐涛-道长的博客" data-tsina="1281197970" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -146,20 +192,20 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/04/28/njsd2015/" title="南京软件开发者大会2015">
-  <strong>上一篇：</strong><br/>
-  <span>
-  南京软件开发者大会2015</span>
+
+<div class="next">
+<a href="/2016/03/31/20160331-rf-envconfig-win32-basic/"  title="RF环境安装-windows32位-基础环境-安装指南">
+ <strong>下一篇：</strong><br/> 
+ <span>RF环境安装-windows32位-基础环境-安装指南
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/28/qitao/" data-title="qitao" data-url="http://qitaos.github.io/2015/04/28/qitao/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/04/20160404-rf-envconfig-win64-basic/" data-title="RF环境安装-windows64位-基础环境-安装指南" data-url="http://qitaos.github.io/2016/04/04/20160404-rf-envconfig-win64-basic/"></div>
 </section>
 
 
@@ -169,7 +215,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、适用环境："><span class="toc-number">1.</span> <span class="toc-text">一、适用环境：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、简要步骤："><span class="toc-number">2.</span> <span class="toc-text">二、简要步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、详细步骤："><span class="toc-number">3.</span> <span class="toc-text">三、详细步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、pip"><span class="toc-number">4.</span> <span class="toc-text">四、pip</span></a></li></ol>
  
   </div>
 
